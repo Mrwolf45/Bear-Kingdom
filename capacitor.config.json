@@ -1,0 +1,6 @@
+{
+  "appId": "com.bearkingdom.wildhunter",
+  "appName": "Bear Kingdom",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
