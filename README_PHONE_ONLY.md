@@ -1,26 +1,25 @@
-# Bear Kingdom: Wild Hunter — Phone-only starter
+# Bear Kingdom: Wild Hunter — Realistic Upgrade
 
-This is the first playable prototype, not the finished full game. It includes:
-- 3D forest scene and castle/market buildings
-- Third-person hunter character and touch joystick
-- Bears with simple movement AI
-- Hunt interaction, meat collection and selling
-- Castle upgrade and worker hiring buttons
-- Responsive landscape/portrait UI
+This is an upgraded, playable 3D prototype for Android. It includes a forest environment, castle and market structures, a hunter model, bear models, touch joystick, hunting, meat selling, castle upgrades, worker hiring, simple generated sound effects, and graphics settings.
 
-## Build an APK using only your Android phone
+## Important honest limitation
+This is **not** a finished AAA or photorealistic game. Models are procedurally built from Three.js geometry; animations and sounds are lightweight prototypes. High-quality rigged characters, motion-captured animations, detailed animal fur, voice acting, large quest systems, save/load, multiplayer, and professionally composed music are not included yet. Those require separate art/audio assets and more development.
 
-1. Open https://github.com/ in Chrome and sign in or create a free account.
-2. Create a new **public** repository named `bear-kingdom-wild-hunter`.
-3. Upload the contents of this ZIP into the repository (not the ZIP itself). On GitHub mobile web, use **Add file → Upload files**. Keep the `.github/workflows/build-apk.yml` folder structure.
-4. Open the repository's **Actions** tab. If GitHub asks, enable Actions.
-5. Select **Build Bear Kingdom APK** → **Run workflow**. You can also push a commit to `main` to trigger it.
-6. Wait for the workflow to finish with a green check.
-7. Open the completed workflow run, scroll to **Artifacts**, and download `Bear-Kingdom-Android-APK`.
-8. Extract the downloaded ZIP on your phone and install `app-debug.apk`. Android may ask you to allow installs from your browser/file manager.
+## Build APK from an Android phone using GitHub
+1. Create/open your GitHub repository.
+2. Upload and replace the files in this ZIP, keeping the exact paths.
+3. Commit changes to the `main` branch.
+4. Open the repository's **Actions** tab.
+5. Choose **Build Android APK** and tap **Run workflow**.
+6. When the run succeeds, download the `Bear-Kingdom-Android-APK` artifact ZIP.
+7. Extract it with ZArchiver and install `app-debug.apk`.
 
-## Important
-- GitHub Actions offers limited free usage; public repositories generally have free standard-runner usage subject to GitHub's current limits.
-- The APK is a debug APK for testing, not a Play Store release.
-- The game loads Three.js from the bundled app build. No desktop computer is required.
-- This is a starter prototype. Bear animations, combat, sound, inventory persistence, detailed models, missions, and full castle-building are planned next.
+## Files
+- `package.json`
+- `index.html`
+- `capacitor.config.json`
+- `src/main.js`
+- `src/style.css`
+- `.github/workflows/build-apk.yml`
+
+The workflow creates the Android project in GitHub Actions, so you do not need a PC.

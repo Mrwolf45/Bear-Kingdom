@@ -1,30 +1,33 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-  <meta name="theme-color" content="#101b16" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#17251c">
   <title>Bear Kingdom: Wild Hunter</title>
 </head>
 <body>
   <div id="game"></div>
   <div id="hud">
-    <div class="topbar">
+    <header class="top">
       <div class="brand"><span class="crest">♜</span><div><b>BEAR KINGDOM</b><small>WILD HUNTER</small></div></div>
-      <div class="stats"><span>🪙 <b id="coins">0</b></span><span>🥩 <b id="meat">0</b></span><span>❤️ <b id="health">100</b></span></div>
-    </div>
-    <div class="mission"><b>FIRST HUNT</b><span id="objective">Find a bear in the forest</span></div>
-    <div class="toast" id="toast">Explore the forest and hunt a bear!</div>
-    <div class="bottom-ui">
-      <div class="left-controls"><div id="joystick"><div id="stick"></div></div><small>MOVE</small></div>
-      <div class="right-controls">
-        <button id="attack" class="action">🏹<small>HUNT</small></button>
-        <button id="sell" class="action">🧺<small>SELL</small></button>
-        <button id="upgrade" class="action">🏰<small>UPGRADE</small></button>
-        <button id="hire" class="action">🧑‍🌾<small>HIRE</small></button>
+      <div class="stats"><span>🪙 <b id="coins">0</b></span><span>🥩 <b id="meat">0</b></span><span>❤ <b id="health">100</b></span></div>
+    </header>
+    <div class="mission"><b>HUNTING CONTRACT</b><span id="objective">Explore the forest and find a bear.</span><small id="level">Hunter level 1 · XP 0</small></div>
+    <div id="toast" class="toast">Welcome, hunter.</div>
+    <div class="bottom">
+      <div class="left"><div id="joystick"><div id="stick"></div></div><small>MOVE</small></div>
+      <div class="actions">
+        <button id="attack" class="action attack">🏹<small>HUNT</small></button>
+        <button id="sell" class="action">🪙<small>SELL</small></button>
+        <button id="upgrade" class="action">🏰<small>CASTLE</small></button>
+        <button id="hire" class="action">🛡️<small>HIRE</small></button>
       </div>
     </div>
-    <div class="hint" id="hint">Move near a bear, then tap HUNT.</div>
+    <div class="settings">
+      <button id="sound">🔊 Sound ON</button>
+      <button id="quality">Graphics: HIGH</button>
+    </div>
   </div>
   <script type="module" src="/src/main.js"></script>
 </body>
